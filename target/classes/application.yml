@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-52-0-114-209.compute-1.amazonaws.com:5432/d4vfid3kvff7dh?user=nogiilkovyctlx&password=6052628e7d27f2ad05770585415805b11f615f23d36ced85ee0753cb7e5c2841&sslmode=require
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+
+external:
+  github-jobs:
+    uri-scheme: http
+    host: jobs.github.com
+    path: positions.json
